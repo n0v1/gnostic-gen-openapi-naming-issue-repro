@@ -1,0 +1,1 @@
+# gnostic-gen-openapi-naming-issue-repro
