@@ -1,6 +1,6 @@
 # gnostic proto-gen-openapi naming issue
 
-Relates to issue [#309](https://github.com/google/gnostic/issues/309).
+Relates to issue [#392](https://github.com/google/gnostic/issues/392).
 
 ## Steps to Reproduce
 
