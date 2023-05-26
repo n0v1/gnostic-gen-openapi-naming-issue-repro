@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.example.bar;
+option go_package = "com/example/bar";
+
+// This message should not be used by protoc-gen-openapi because it's defined
+// in a different package and not references anywhere.
+message HelloWorld {
+  string bar_1 = 1;
+  string bar_2 = 2;
+  string bar_3 = 3;
+}
+
+message BarBaz {
+  string bar = 1;
+  string baz = 2;
+}

@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package com.example.foo;
+option go_package = "com/example/foo";
+
+import "google/api/annotations.proto";
+import "bar.proto";
+
+// A message named 'HelloWorld' exists in this package and also in the imported 'bar' package.
+message HelloWorld {
+  string foo = 1;
+}
+
+message FooRequest {
+  com.example.bar.BarBaz bar_baz = 2;
+}
+
+message FooResponse {
+  // Both fields reference the HelloWorld message that's defined in package 'foo' (this file).
+  HelloWorld hello_world = 1;
+  com.example.foo.HelloWorld hello_world_2 = 2;
+}
+
+service FooService {
+  rpc Foo(FooRequest) returns (FooResponse) {
+    option (google.api.http) = {
+      get : "/foo"
+    };
+  }
+}
